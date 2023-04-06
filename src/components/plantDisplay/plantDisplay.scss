@@ -1,0 +1,46 @@
+@use "../../style/variables.scss" as v;
+@use "../../style/mixins.scss" as m;
+
+.container{
+  width: 100%;
+   height: 1024px;
+  background-color: v.$section;
+  
+
+  &__link{
+    text-decoration: none;
+
+     &__card{
+    
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      grid-gap: 20px;
+    
+
+
+    &__name{
+      font-family: v.$title;
+      font-size: 1.5rem;
+      text-align: center;
+      color: #000;
+
+    }
+
+     &__wrapper{
+      display: grid;
+      grid-template-rows: max-content 200px 1fr;
+     
+
+
+
+        &__img{
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+
+        }
+
+     }
+    }
+  }
+}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { IPlant } from '../../models/IPlant'
 import { getPlantById } from '../../services/plantService'
+import './singelPlant.scss'
 
 export const SingelPlant = () => {
   const [singelPlant, setSingelPlants] = useState<IPlant>()

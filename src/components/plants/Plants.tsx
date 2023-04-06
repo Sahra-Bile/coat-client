@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { IPlant } from '../../models/IPlant'
 import { getAllPlant } from '../../services/plantService'
 import { PlantDisplay } from '../plantDisplay/PlantDisplay'
+import './plants.scss'
 
 export const Plants = () => {
   const [plants, setPlants] = useState<IPlant[]>([])
@@ -23,5 +24,5 @@ export const Plants = () => {
     return <PlantDisplay plant={plant} key={plant.id}></PlantDisplay>
   })
 
-  return <div>{plantHtml}</div>
+  return <>{plantHtml} </>
 }

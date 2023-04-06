@@ -1,0 +1,80 @@
+@use "../../style/variables" as v;
+@use "../../style/mixins" as m;
+
+.header{
+    position: relative;
+    display: grid;
+    height: 100vh;
+    width: 100%;
+
+    @include m.desktop{
+        &__left{
+            background-color: v.$bg;
+            position: absolute;
+            width: 96px;
+            height:100vh;
+            background-color: v.$section;
+            left: 0px;
+        }
+        &__right{
+            background-color: v.$bg;
+            position: absolute;
+            width: 96px;
+            height: 100%;
+            background-color: v.$section;
+            right: 0px;
+        }
+    }
+
+    &__container{
+        background-color: v.$light-green;
+        border-radius: 50%;
+        width:100%;
+        height: 100%;
+        
+        display: grid;
+        justify-self: center;
+        align-items: center;
+        position: absolute;
+        @include m.desktop{
+            width: 500px;
+        height: 500px;
+        margin-top: 10%;
+
+        }
+
+        &__title{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+                justify-content: center;
+
+            
+            &__flex{
+                color: v.$text-color;
+                font-family: v.$title;
+                font-size: 3.5rem;
+                
+                @include m.desktop{
+                    font-size: 4.5rem;
+                }
+            }
+        }
+        &__link-dark{
+            color: v.$dark-green;
+            font-size: 2.8rem;
+        }
+        &__link-light{
+            color: v.$icon;
+            font-size: 2.8rem;
+        }
+        @include m.desktop{
+            &__link-dark{
+                font-size: 3.5;
+            }
+            &__link-light{
+                font-size: 3.6;
+            }
+        }
+    }
+}
