@@ -1,2 +1,57 @@
 @use "../../style/variables.scss" as v;
 @use "../../style/mixins.scss" as m;
+
+.singel-container{
+    width: 80%;
+    margin-top: 10%;
+
+    @include m.desktop{
+        display: flex;
+
+    }
+
+    &__wrapper{
+        &__img{
+            width: 100%;
+            @include m.desktop{
+            width: 100%;
+            
+            }
+        }
+
+    }
+    &__text-wrapper{
+        background-color: v.$section;
+        padding: 10%;
+        border: 1px solid v.$text-color;
+        border-radius: 4px;
+        margin: 4%;
+        &__name{
+            font-family: v.$title;
+            text-align: center;
+            color: v.$dark-green;
+            margin-bottom: 5%;
+
+        }
+        &__desc{
+            color: v.$text-color
+            
+        }
+        @include m.desktop{
+            background: none;
+            border: none;
+            width: 100%;
+            &__name{
+                font-size: 4rem;
+            }
+            &__desc{
+                background: v.$section;
+                border: 2px solid v.$text-color;
+                border-radius: 10px;
+                padding: 15%;
+
+            }
+        }
+
+    }
+}

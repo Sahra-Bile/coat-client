@@ -1,24 +1,49 @@
 @use "../../style/variables.scss" as v;
 @use "../../style/mixins.scss" as m;
 
+#root{
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper{
+  margin-top: 20%;
+  @include m.desktop{
+   
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:5%;
+  margin-top: 15%;
+  width: 80%;
+  }
 .container {
-  background-color: v.$section;
+  width:25%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+
 
   &__link {
     text-decoration: none;
 
     &__card {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
+      
       gap: 10px;
+      background-color: v.$section;
+      margin: 5%;
+      
 
-      width: 20%;
       // display: inline-block;
       box-shadow: 2px 2px 20px black;
       border-radius: 5px;
       margin: 2%;
+        @include m.desktop{
+          flex-direction: row;
+          gap:10%;
+          margin-top: 5%;
+          
+        }
 
       &__name {
         font-family: v.$title;
@@ -30,11 +55,13 @@
 
       &__wrapper {
         &__img {
-          width: 100%;
+          width: 90%;
           border-top-right-radius: 5px;
           border-top-left-radius: 5px;
+          
         }
       }
     }
   }
+}
 }

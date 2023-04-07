@@ -30,11 +30,11 @@ export const SingelPlant = () => {
           alt={singelPlant?.name}
         />
       </div>
-      <div className="singel-container__tex-wrapper">
-        <h2 className="singel-container__tex-wrapper__name">
+      <div className="singel-container__text-wrapper">
+        <h2 className="singel-container__text-wrapper__name">
           {singelPlant?.name}
         </h2>
-        <p className="singel-container__tex-wrapper__desc">
+        <p className="singel-container__text-wrapper__desc">
           {singelPlant?.description}
         </p>
       </div>
