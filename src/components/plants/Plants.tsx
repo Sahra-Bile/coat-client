@@ -24,5 +24,7 @@ export const Plants = () => {
     return <PlantDisplay plant={plant} key={plant.id}></PlantDisplay>
   })
 
-  return <div className="wrapper">{plantHtml} </div >
+  return <div className="wrapper">
+    {plantHtml} </div >
+
 }
