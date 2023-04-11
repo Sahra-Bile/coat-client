@@ -10,21 +10,21 @@ export const Plants = () => {
   useEffect(() => {
     const getData = async () => {
       let plantFromApi = await getAllPlant()
-      console.log('denna är den första listan:', plantFromApi)
-      setPlants(plantFromApi)
+
+      const sortedList = plantFromApi.sort(
+        (a, b) => a.name.localeCompare(b.name) || a.name.localeCompare(b.name),
+      )
+
+      setPlants(sortedList)
     }
     if (plants.length > 0) return
 
     getData()
   })
 
-  console.log('den är den andra listan ', plants)
-
   let plantHtml = plants.map((plant) => {
     return <PlantDisplay plant={plant} key={plant.id}></PlantDisplay>
   })
 
-  return <div className="wrapper">
-    {plantHtml} </div >
-
+  return <div className="wrapper">{plantHtml} </div>
 }
